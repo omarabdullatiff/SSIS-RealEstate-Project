@@ -3,14 +3,14 @@ use master ;
 IF NOT EXISTS (
     SELECT 1
     FROM sys.databases
-    WHERE name = 'real_estate_src_sys'
+    WHERE name = 'real_estate_oltp_src_sys'
 )
 BEGIN
     CREATE DATABASE real_estate_src_sys;
 END
 
 Go
-use real_estate_src_sys
+use real_estate_oltp_src_sys
 GO
 
 CREATE TABLE Customers (
